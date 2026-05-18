@@ -19,10 +19,10 @@ jobs:
           dotnet-version: '9.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore FinanceTracker.sln
+        run: dotnet restore FinanceTracker/FinanceTracker.sln
 
       - name: Build
-        run: dotnet build FinanceTracker.sln --no-restore
+        run: dotnet build FinanceTracker/FinanceTracker.sln --no-restore
 
       - name: Run tests
-        run: dotnet test FinanceTracker.sln --no-build --verbosity normal
+        run: dotnet test FinanceTracker/FinanceTracker.sln --no-build --verbosity normal
